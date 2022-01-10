@@ -2,6 +2,7 @@ import './TodoContainer.scss';
 import Header from '../Header/Header.js'
 import InputTodo from '../InputTodo/InputTodo.js'
 import Navbar from '../Navbar/Navbar.js'
+import TodoList from '../TodoList/TodoList.js'
 
 function TodoContainer() {
   return (
@@ -10,6 +11,7 @@ function TodoContainer() {
       <Header />
       <InputTodo />
       <Navbar />
+      <TodoList />
     </div>
   );
 }
