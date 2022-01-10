@@ -3,7 +3,7 @@ import './Header.scss';
 function Header() {
   return (
     <header>
-      header
+      do it
     </header>
   );
 }
