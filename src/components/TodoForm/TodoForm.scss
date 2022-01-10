@@ -1,0 +1,27 @@
+#todoForm {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: fit-content;
+  width: 500px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  #todoInput {
+    width: 500px;
+    width: 100%;
+    border-radius: 15px;
+    display: inline;
+    padding: 10px 20px;
+    width: calc(100% - 20px - 60px);
+    border: 0;
+    &:focus {
+      outline: none;
+    }
+  }
+  #todoSubmitNew {
+    border: 0;
+    font-weight: bolder;
+    font-size: larger;
+    background-color: white;
+  }
+}
