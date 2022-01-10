@@ -1,4 +1,3 @@
-import logo from '../../logo.svg';
 import TodoContainer from '../TodoContainer/TodoContainer';
 import './App.css';
 
