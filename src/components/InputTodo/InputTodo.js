@@ -1,6 +1,6 @@
 import './InputTodo.scss';
 
-function App() {
+function InputTodo() {
   return (
     <div id='todoInput' >
       #todoInput
@@ -8,4 +8,4 @@ function App() {
   );
 }
 
-export default App;
+export default InputTodo;
