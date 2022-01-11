@@ -1,11 +1,16 @@
 .todoItem {
-  max-width: 400px;
   display: flex;
   justify-content: space-between;
-  // background-color: indianred;
-  border-bottom: 1px solid #ECECEC;
-  .todoData >* {
-    padding-left: 10px;
-    // background-color: blue;
+  border-bottom: 1px solid #ececec;
+  max-width: 400px;
+  padding: 15px 0;
+  .todoData {
+    >* {
+      padding-left: 10px;
+    }
   }
+  .todoRemoveBtn {
+    color: red;
+  }
+
 }

@@ -8,7 +8,7 @@ function TodoItem(props) {
   return (
     <div className='todoItem'>
       <div className='todoData'>
-        <input type="checkbox" checked={data.checked} ></input>
+        <input type="checkbox" checked={data.checked} readOnly ></input>
         <span>{data.title}</span>
       </div>
       <div className='todoRemoveBtn'>
