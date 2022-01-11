@@ -8,10 +8,9 @@ import todos from '../../data.js'
 function TodoContainer() {
   return (
     <div id="todoContainer">
-      #todoContainer
+      <Navbar />
       <Header />
       <TodoForm />
-      <Navbar />
       <TodoList todos={todos}/>
     </div>
   );

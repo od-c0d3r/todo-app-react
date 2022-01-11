@@ -1,16 +1,28 @@
 .todoItem {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border-bottom: 1px solid #ececec;
   max-width: 400px;
   padding: 15px 0;
+
   .todoData {
-    >* {
+    > * {
       padding-left: 10px;
     }
   }
-  .todoRemoveBtn {
-    color: red;
-  }
 
+  .todoRemoveBtn {
+    background-color: #f1f3f4;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    > * {
+      color: red;
+      position: relative;
+      left: calc(100% - 27.5px);
+      top: calc(100% - 30px);
+    }
+  }
 }
