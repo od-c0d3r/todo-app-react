@@ -4,11 +4,12 @@ function TodoForm(props) {
   const { handleTodosToContainer } = props;
 
   const submitTodo = (e) => {
-    e.preventDefault();
     handleTodosToContainer({
       checked: false,
       title: e.target.elements[0].value,
     });
+    e.preventDefault();
+    e.target.reset();
   }
 
   return (
