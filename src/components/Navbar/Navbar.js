@@ -3,7 +3,9 @@ import './Navbar.scss';
 function Navbar() {
   return (
     <nav id="nav" >
-      #nav
+      <span></span>
+      <span></span>
+      <span></span>
     </nav>
   );
 }

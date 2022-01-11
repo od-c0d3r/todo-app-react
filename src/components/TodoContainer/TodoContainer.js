@@ -3,6 +3,7 @@ import Header from '../Header/Header.js'
 import TodoForm from '../TodoForm/TodoForm.js'
 import Navbar from '../Navbar/Navbar.js'
 import TodoList from '../TodoList/TodoList.js'
+import todos from '../../data.js'
 
 function TodoContainer() {
   return (
@@ -11,7 +12,7 @@ function TodoContainer() {
       <Header />
       <TodoForm />
       <Navbar />
-      <TodoList />
+      <TodoList todos={todos}/>
     </div>
   );
 }
