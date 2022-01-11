@@ -1,11 +1,13 @@
 #todoForm {
   display: flex;
   align-items: center;
-  background-color: white;
   height: fit-content;
-  max-width:400px;
+  min-width: 400px;
+  margin-bottom: 20px;
   border-radius: 15px;
+  background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
   #todoInput {
     width: 500px;
     width: 100%;
@@ -14,10 +16,12 @@
     padding: 10px 20px;
     width: calc(100% - 20px - 60px);
     border: 0;
+  
     &:focus {
       outline: none;
     }
   }
+
   #todoSubmitNew {
     border: 0;
     font-weight: bolder;
