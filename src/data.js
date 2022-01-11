@@ -1,17 +1,17 @@
 const todos = [{
     id: 0,
     checked: false,
-    title: 'item 1'
+    title: 'Take afternoon walk'
 },
 {
     id: 1,
     checked: false,
-    title: 'item 2'
+    title: 'Don\'t forget to workout'
 },
 {
     id: 2,
     checked: false,
-    title: 'item 3'
+    title: 'Solve the code challenge'
 }];
 
 export default todos;

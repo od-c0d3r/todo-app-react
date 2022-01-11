@@ -4,7 +4,9 @@ function TodoForm() {
   return (
     <form id='todoForm'>
       <input id="todoInput" type="text" placeholder='Add todo'></input>
-      <input id="todoSubmitNew" type="submit" value="+"></input>
+      <div className='submitNewCir'>
+        <input id="todoSubmitNew" type="submit" value="+"></input>
+      </div>
     </form>
   );
 }
