@@ -18,12 +18,24 @@ function TodoContainer() {
     })
   }
 
+  const handleRemoveTodo = (id) => {
+    setTodos((state) => {
+      let todosAfterRemoval = state.todos.filter(function (todo) {
+        return todo.id !== id;
+      });
+      return ({
+        ...state,
+        todos: todosAfterRemoval
+      })
+    })
+  }
+
   return (
     <div id="todoContainer">
       <Navbar />
       <Header />
       <TodoForm todoApp={todoApp} handleTodosToContainer={handleNewTodo} />
-      <TodoList todoApp={todoApp} />
+      <TodoList todoApp={todoApp} handleTodosToList={handleRemoveTodo} />
     </div>
   );
 }

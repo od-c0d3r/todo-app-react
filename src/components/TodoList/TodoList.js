@@ -1,14 +1,17 @@
 import TodoItem from '../TodoItem/TodoItem';
 import './TodoList.scss';
-// import data from './../../data'
 
 function TodoList(props) {
-  const {todos} = props.todoApp;
-  console.log(todos);
+  const { todos } = props.todoApp;
+  const { handleTodosToList } = props;
 
-  const itemsList = todos.map((todo) => {
-    return <TodoItem key={todo.id} data={todo} />
-  });
+  const itemsList = todos.map(
+    (todo) => <TodoItem
+      key={todo.id}
+      data={todo}
+      handleRemoveTodoToList={handleTodosToList}
+    />
+  );
 
   return (
     <div id="todoList">
