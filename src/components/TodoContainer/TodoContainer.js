@@ -14,11 +14,11 @@ function TodoContainer() {
       return ({
         id: Number(state.id) + 1,
         todos: [...state.todos, todo]
-      })
-    })
+      });
+    });
   }
 
-  const handleRemoveTodo = (id) => {
+  const removeTodo = (id) => {
     setTodos((state) => {
       let todosAfterRemoval = state.todos.filter(function (todo) {
         return todo.id !== id;
@@ -26,8 +26,29 @@ function TodoContainer() {
       return ({
         ...state,
         todos: todosAfterRemoval
-      })
-    })
+      });
+    });
+  }
+
+  const checkTodo = (id) => {
+    setTodos((state) => {
+      const todoAfterCheck = [];
+      const todo = state.todos.find(function (todo) {
+        return todo.id === id
+      });
+      const todoId = state.todos.indexOf(todo);
+      state.todos.map((todo, mapId) => {
+        if (mapId === todoId) {
+          todoAfterCheck.push({id:todo.id,checked:!todo.checked, title:todo.title});
+          return true;
+        }
+        todoAfterCheck.push(todo)
+      });
+      return ({
+        ...state,
+        todos: todoAfterCheck,
+      });
+    });
   }
 
   return (
@@ -35,7 +56,7 @@ function TodoContainer() {
       <Navbar />
       <Header />
       <TodoForm todoApp={todoApp} handleTodosToContainer={handleNewTodo} />
-      <TodoList todoApp={todoApp} handleTodosToList={handleRemoveTodo} />
+      <TodoList todoApp={todoApp} handleRemoveToList={removeTodo} handleCheckToList={checkTodo} />
     </div>
   );
 }

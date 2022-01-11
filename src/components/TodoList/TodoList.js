@@ -3,13 +3,15 @@ import './TodoList.scss';
 
 function TodoList(props) {
   const { todos } = props.todoApp;
-  const { handleTodosToList } = props;
+  const { handleRemoveToList } = props;
+  const { handleCheckToList } = props;
 
   const itemsList = todos.map(
     (todo) => <TodoItem
       key={todo.id}
       data={todo}
-      handleRemoveTodoToList={handleTodosToList}
+      handleRemoveToItem={handleRemoveToList}
+      handleCheckToItem={handleCheckToList}
     />
   );
 

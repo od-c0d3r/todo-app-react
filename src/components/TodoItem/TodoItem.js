@@ -4,19 +4,16 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 function TodoItem(props) {
   const { data } = props;
-  const { handleRemoveTodoToList } = props;
-
-  const onChecked = (e) => {
-    console.log(e.target);
-  }
+  const { handleRemoveToItem } = props;
+  const { handleCheckToItem } = props;
 
   return (
     <div className='todoItem'>
       <div className='todoData'>
-        <input type="checkbox" checked={data.checked} onChange={onChecked} ></input>
+        <input type="checkbox" checked={data.checked} onChange={()=> handleCheckToItem(data.id)} required={true}></input>
         <span className={data.checked ? 'checkedItem' : ''}>{data.title}</span>
       </div>
-      <div className='todoRemoveBtn' onClick={() => handleRemoveTodoToList(data.id)} >
+      <div className='todoRemoveBtn' onClick={() => handleRemoveToItem(data.id)} >
         <FontAwesomeIcon icon={faTrash} />
       </div>
     </div>

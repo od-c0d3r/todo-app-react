@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "eslint-plugin-react-hooks": "^4.3.0",
-    "fontawesome": "^5.6.3"
+    "fontawesome": "^5.6.3",
+    "react-hook-form": "^7.22.5"
   }
 }
