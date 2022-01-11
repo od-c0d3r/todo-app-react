@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './TodoContainer.scss';
 import Header from '../Header/Header.js'
 import TodoForm from '../TodoForm/TodoForm.js'
@@ -6,7 +6,13 @@ import Navbar from '../Navbar/Navbar.js'
 import TodoList from '../TodoList/TodoList.js'
 
 function TodoContainer() {
-  let [todoApp, setTodos] = useState({ id: 0, todos: [] });
+  const gettodoAppfromLocalStore = () => {
+    const temp = localStorage.getItem("todoApp")
+    const loadedTodos = JSON.parse(temp)
+    return loadedTodos;
+  }
+
+  let [todoApp, setTodos] = useState(gettodoAppfromLocalStore() || { id: 0, todos: [] });
 
   const handleNewTodo = (todo) => {
     setTodos((state) => {
@@ -32,24 +38,22 @@ function TodoContainer() {
 
   const checkTodo = (id) => {
     setTodos((state) => {
-      const todoAfterCheck = [];
-      const todo = state.todos.find(function (todo) {
-        return todo.id === id
+      const todoAfterCheck = state.todos.map((todo) => {
+        if (todo.id === id) return { id: todo.id, checked: !todo.checked, title: todo.title };
+        return todo;
       });
-      const todoId = state.todos.indexOf(todo);
-      state.todos.map((todo, mapId) => {
-        if (mapId === todoId) {
-          todoAfterCheck.push({id:todo.id,checked:!todo.checked, title:todo.title});
-          return true;
-        }
-        todoAfterCheck.push(todo)
-      });
+
       return ({
         ...state,
         todos: todoAfterCheck,
       });
     });
-  }
+  };
+
+  useEffect(() => {
+    const temp = JSON.stringify(todoApp);
+    localStorage.setItem("todoApp", temp);
+  })
 
   return (
     <div id="todoContainer">
