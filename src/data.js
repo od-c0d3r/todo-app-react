@@ -5,7 +5,7 @@ const todos = [{
 },
 {
     id: 1,
-    checked: false,
+    checked: true,
     title: 'Don\'t forget to workout'
 },
 {

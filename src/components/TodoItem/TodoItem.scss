@@ -12,6 +12,12 @@
     > * {
       padding-left: 10px;
     }
+    .checkedItem {
+      text-decoration: line-through;
+      text-decoration-color: skyblue;
+      text-decoration-style: wavy;
+      text-decoration-thickness: 2px;
+    }
   }
 
   .todoRemoveBtn {

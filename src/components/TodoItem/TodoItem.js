@@ -9,12 +9,12 @@ function TodoItem(props) {
     <div className='todoItem'>
       <div className='todoData'>
         <input type="checkbox" checked={data.checked} readOnly ></input>
-        <span>{data.title}</span>
+        <span className={data.checked ? 'checkedItem' : ''}>{data.title}</span>
       </div>
       <div className='todoRemoveBtn'>
         <FontAwesomeIcon icon={faTrash} />
       </div>
-    </div>
+    </div >
   );
 }
 
