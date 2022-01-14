@@ -1,5 +1,4 @@
-# Math Magicians App
-
+# Todo app
 <img align="right" src="./public/react.svg" style="width:400px;">
 
 > Milestone 1 : Set up the environment and tools needed to develop a React application
