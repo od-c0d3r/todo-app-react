@@ -6,7 +6,7 @@
   margin-bottom: 20px;
   border-radius: 15px;
   background-color: white;
-  box-shadow: skyblue 0px 1px 4px, skyblue 0px 0px 0px 3px;
+  box-shadow: skyblue 0 1px 4px, skyblue 0 0 0 3px;
 
   #todoInput {
     width: 500px;
@@ -39,7 +39,7 @@
     height: 21px;
     width: 21px;
     border-radius: 50%;
-    background-color: #F1F3F4;
+    background-color: #f1f3f4;
     content: "222";
   }
 }

@@ -3,7 +3,7 @@ import './Header.scss';
 function Header() {
   return (
     <header>
-      du'it
+      du&apos;it
     </header>
   );
 }

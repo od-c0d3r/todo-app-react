@@ -1,40 +1,38 @@
 import { useState, useEffect } from 'react';
 import './TodoContainer.scss';
-import Header from '../Header/Header.js'
-import TodoForm from '../TodoForm/TodoForm.js'
-import Navbar from '../Navbar/Navbar.js'
-import TodoList from '../TodoList/TodoList.js'
+import Header from '../Header/Header';
+import TodoForm from '../TodoForm/TodoForm';
+import Navbar from '../Navbar/Navbar';
+import TodoList from '../TodoList/TodoList';
 
 function TodoContainer() {
   const gettodoAppfromLocalStore = () => {
-    const temp = localStorage.getItem("todoApp")
-    const loadedTodos = JSON.parse(temp)
+    const temp = localStorage.getItem('todoApp');
+    const loadedTodos = JSON.parse(temp);
     return loadedTodos;
-  }
+  };
 
-  let [todoApp, setTodos] = useState(gettodoAppfromLocalStore() || { id: 0, todos: [] });
+  const [todoApp, setTodos] = useState(gettodoAppfromLocalStore() || { id: 0, todos: [] });
 
   const handleNewTodo = (todo) => {
     setTodos((state) => {
-      todo.id = Number(state.id) + 1;
+      const newTodo = { ...todo, id: Number(state.id) + 1, };
       return ({
         id: Number(state.id) + 1,
-        todos: [...state.todos, todo]
+        todos: [...state.todos, newTodo],
       });
     });
-  }
+  };
 
   const removeTodo = (id) => {
     setTodos((state) => {
-      let todosAfterRemoval = state.todos.filter(function (todo) {
-        return todo.id !== id;
-      });
+      const todosAfterRemoval = state.todos.filter((todo) => todo.id !== id);
       return ({
         ...state,
-        todos: todosAfterRemoval
+        todos: todosAfterRemoval,
       });
     });
-  }
+  };
 
   const checkTodo = (id) => {
     setTodos((state) => {
@@ -52,8 +50,8 @@ function TodoContainer() {
 
   useEffect(() => {
     const temp = JSON.stringify(todoApp);
-    localStorage.setItem("todoApp", temp);
-  })
+    localStorage.setItem('todoApp', temp);
+  });
 
   return (
     <div id="todoContainer">
