@@ -16,7 +16,7 @@ function TodoContainer() {
 
   const handleNewTodo = (todo) => {
     setTodos((state) => {
-      const newTodo = { ...todo, id: Number(state.id) + 1, };
+      const newTodo = { ...todo, id: Number(state.id) + 1 };
       return ({
         id: Number(state.id) + 1,
         todos: [...state.todos, newTodo],

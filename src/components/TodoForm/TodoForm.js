@@ -5,7 +5,6 @@ function TodoForm(props) {
   const { handleTodosToContainer } = props;
 
   const submitTodo = (e) => {
-    console.log(e.target.elements[0].value);
     handleTodosToContainer({
       checked: false,
       title: e.target.elements[0].value,
