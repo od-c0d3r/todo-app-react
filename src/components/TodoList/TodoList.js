@@ -1,3 +1,5 @@
+/* eslint-disable react/forbid-prop-types */
+
 import './TodoList.scss';
 import PropTypes from 'prop-types';
 import TodoItem from '../TodoItem/TodoItem';

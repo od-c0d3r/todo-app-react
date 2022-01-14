@@ -3,11 +3,11 @@ import './About.scss';
 
 function About() {
   return (
-    <div id="aboutPage"
+    <div id="aboutPage">
       <Navbar />
-        <span>This is about page</span>
-      </div>
+      <span>This is about page</span>
+    </div>
   );
-};
+}
 
 export default About;

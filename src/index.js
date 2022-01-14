@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom';
 import {
   BrowserRouter,
   Routes,
-  Route
-} from "react-router-dom";
+  Route,
+} from 'react-router-dom';
 import App from './components/App/App';
 import About from './components/About/About';
 import TodoContainer from './components/TodoContainer/TodoContainer';
 import './index.css';
-
 
 ReactDOM.render(
   <React.StrictMode>

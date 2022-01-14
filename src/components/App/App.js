@@ -1,4 +1,3 @@
-import Header from '../Header/Header';
 import Navbar from '../Navbar/Navbar';
 import TodoContainer from '../TodoContainer/TodoContainer';
 import './App.css';
