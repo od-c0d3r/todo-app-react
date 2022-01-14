@@ -1,7 +1,6 @@
 #todoForm {
   display: flex;
   align-items: center;
-  height: fit-content;
   min-width: 450px;
   margin-bottom: 20px;
   border-radius: 15px;
@@ -10,7 +9,6 @@
 
   #todoInput {
     width: 500px;
-    width: 100%;
     border-radius: 15px;
     display: inline;
     padding: 10px 20px;
