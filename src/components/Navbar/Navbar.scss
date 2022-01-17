@@ -1,0 +1,15 @@
+#nav {
+  position: absolute;
+  left: 30px;
+  top: 40px;
+
+  span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin-bottom: 5px;
+    background-color: lightskyblue;
+    border-radius: 3px;
+    z-index: 1;
+  }
+}
