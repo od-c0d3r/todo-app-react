@@ -1,16 +1,6 @@
 # Todo app
-<img align="right" src="./public/react.svg" style="width:400px;">
-
-> Milestone 1 : Set up the environment and tools needed to develop a React application
-
-> Milestone 2 : Develop React components that will hold the core functionality: a calculator.
-
-> Milestone 3 : Import and merge the logic needed to make the Calculator components developed in the previous milestone work.
-
-> Milestone 4 : Refactor the Calculator components, to use hooks instead of using class based components.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
-
 
 ## Built With
 
@@ -18,53 +8,39 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Live Demo
 
-- Served with Github pages : [Live](https://od-c0d3r.github.io/math-magicains-react/)
+- Served with Github pages : [Live](https://622ee353e5d1f00e265aadd9--happy-mcclintock-7bf83e.netlify.app/)
 
 ## App Tree
 
-<img align="right" src="./public/screen_shot.gif" width="350px">
-
 ```markdown
-.
-├── public
-│   ├── favicon.ico
-│   ├── index.html
-│   ├── logo192.png
-│   ├── logo512.png
-│   ├── manifest.json
-│   ├── react.svg
-│   └── robots.txt
-├── src
-│   ├── components
-│   │   ├── app
-│   │   │   ├── App.js
-│   │   │   └── App.scss
-│   │   ├── calculator
-│   │   │   ├── Calculator.js
-│   │   │   └── Calculator.scss
-│   │   ├── key
-│   │   │   ├── Key.js
-│   │   │   └── Key.scss
-│   │   ├── keyboard
-│   │   │   ├── Keyboard.js
-│   │   │   └── Keyboard.scss
-│   │   └── screen
-│   │       ├── Screen.js
-│   │       └── Screen.scss
-│   ├── logic
-│   │   ├── calculate.js
-│   │   └── operate.js
-│   ├── index.js
-│   └── index.scss
-├── .babelrc
-├── .env
-├── .eslintrc.json
-├── .gitignore
-├── .stylelintrc.json
-├── LICENSE
-├── package-lock.json
-├── package.json
-└── README.md
+src
+├── components
+│   ├── About
+│   │   └── About.js
+│   ├── App
+│   │   ├── App.css
+│   │   └── App.js
+│   ├── Header
+│   │   ├── Header.js
+│   │   └── Header.scss
+│   ├── Navbar
+│   │   ├── Navbar.js
+│   │   └── Navbar.scss
+│   ├── TodoContainer
+│   │   ├── TodoContainer.js
+│   │   └── TodoContainer.scss
+│   ├── TodoForm
+│   │   ├── TodoForm.js
+│   │   └── TodoForm.scss
+│   ├── TodoItem
+│   │   ├── TodoItem.js
+│   │   └── TodoItem.scss
+│   └── TodoList
+│       ├── TodoList.js
+│       └── TodoList.scss
+├── index.css
+├── index.js
+└── logo.svg
 ```
 
 ## Getting Started
@@ -72,8 +48,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 To get a local copy up and running follow these simple example steps
 
 - From your terminal enter in sequence 
-  - `git clone https://github.com/od-c0d3r/math-magicains-react.git`
-  - `code math-magicains-react`
+  - `git clone https://github.com/od-c0d3r/todo-app-react.git`
+  - `code todo-app-react`
 
 ### Available Scripts
 
@@ -86,10 +62,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
   - The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-- #### `npm test`
-
-  - Launches the test runner in the interactive watch mode.
 
 - #### `npm run build`
 
@@ -115,10 +87,6 @@ Feel free to check the [issues page](../../issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgemnt
-
-- Calculator design by [Özge Oldaç](https://dribbble.com/shots/6805175-Daily-UI-004-Calculator/attachments/6805175-Daily-UI-004-Calculator?mode=media)
 
 ## 📝 License
 
